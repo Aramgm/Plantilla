@@ -5,12 +5,13 @@
 *************************************************************************/                                                                     
 
 //******  Includes  ******************************************************
-int lecturaSensor = 2; //Variable interna
+int lecturaSensor = 3; //Variable interna
 //******  Setup  ********************************************************* 
 void setup() {
   
 Serial.begin(9600);    //Velocitat de càrrega d'escaneig
-Serial.println("Fa un dia... ");//Escriu el text i salta de línea.
+
+ Serial.println("Fa un dia... ");//Escriu el text i salta de línea.
    
 switch (lecturaSensor) {
     case 0:     //Quan la variable coincideix amb 0 escriu el text següent.  
@@ -20,7 +21,7 @@ switch (lecturaSensor) {
     Serial.print("nublat");
     break;
     case 2:     //Quan la variable coincideix amb 2 escriu el text següent.
-    Serial.print("asolellat");
+    Serial.print("assolellat");
     break;
     case 3:     //Quan la variable coincideix amb 3 escriu el text següent.
     Serial.print("collonut");
@@ -29,10 +30,9 @@ switch (lecturaSensor) {
     Serial.print("No en tinc ni idea!!!");
     //La paraula "break" s'utilitza a continuació de "case" per denotar 
     //continuitat, fins que la variable coincideixi o finalitzi el programa.
+  
   } 
 }
-
-
 
 
 
