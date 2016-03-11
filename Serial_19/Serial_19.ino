@@ -1,7 +1,7 @@
 /*************************************************************************
-**     Compta de 0 fins a 110. Cada nombre el separa amb un guió.       **
-**Si incrementem la variable comptar, comptarà fins el nombre assignat  **
-**                         Només ho fa un cop.                          **  
+**Fa el càlcul de les resistències en sèrie i en paral·lel de dos valors**
+**          introduïts de manera manual i enviats a l'Arduino.          **
+**           Es poden introduir tants valors coms es vulgui.            **  
 *************************************************************************/                                                                     
 
 //******  Includes  ******************************************************
