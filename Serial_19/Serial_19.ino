@@ -9,10 +9,11 @@ float r1, r2;   // Variables amb coma flotant (punt decimal)per les dades.
 float rSerie, rParalel;// Variables amb coma flotant per el resultat.
 //******  Setup  *********************************************************   
 void setup() { 
-Serial.begin(9600);  //Velocitat de càrrega d'escaneig
+Serial.begin(9600);        //Velocitat de càrrega d'escaneig
 
 Serial.println("Entra el valor de r1 i r2 (separats per una coma)");
 //Escriu el text i salta de línea.
+Serial.println ();         //Deixa un espai en blanc.
 }
 
 //******  Loop  ********************************************************** 
@@ -30,10 +31,34 @@ while (Serial.available() > 0) {  // Si la variable es més gran que zero
 
     Serial.print ("R2=");  //Escriu R2=.
     Serial.println ( r2) ; //Inserta el nombre de la variable r2.
+    Serial.println ();     //Deixa un espai en blanc.
    
-    if (Serial.read() == '\n') { //Comproba el final de línea
-    //CODI ALUMNE (calcula r1 i r2 en serie i paral•lel, mostra resultats i                      
-                 //fa de nou la pregunta inicial)
+    if (Serial.read() == '\n') { //Comproba el final de línea.
+    
+    Serial.println ("Resistencies en serie:");//Escriu el text i salta de
+                           //línea.
+    Serial.println ();     //Deixa un espai en blanc.
+    
+    Serial.print ("RT = R1 + R2 = ");//Escriu el text.
+    Serial.print (r1);   //Escriu la variable r1.
+    Serial.print (" + ");   //Escriu +.
+    Serial.print (r2);   //Escriu la variable r2.
+    Serial.print(" = ");    //Escriu =.
+    Serial.print (r1+r2);//Escriu el resultat de la suma de les variables.
+    Serial.println ("ohms");//Escriu el text i salta de línea.
+    Serial.println ();   //Deixa un espai en blanc.
+    
+    Serial.println ("Resistencies en paral.lel:");//Escriu el text i salta
+                           //de línea.
+    Serial.println ();     //Deixa un espai en blanc.
+    
+    Serial.print("RT = 1 / (( 1 / R1 ) + ( 1 / R2)) = 1 / ( ");//Escriu el 
+                           //text.
+    Serial.println (1/r1); //Fa la divisió de 1 entre la variable r1.
+    Serial.print (" + ");  //Escriu +.
+    Serial.println (1/r2); //Fa la divisió de 1 entre la variable r2.
+    Serial.print(" ) = "); //Escriu ) =.
+    
     }
   }
 }
